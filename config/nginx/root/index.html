@@ -1,24 +1,89 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
-	<head>
-		<title>Nginx works</title>
-		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
-	</head>
-	<body>	
-		<div id="content"> 
-			<h1 class="headline">Default website</h1>
-			<p>Congratulations, your Nginx seems to work just fine. :)</p>
-			<p>Let me know, in case you have any further problems:</p>
-			<ul>
-				<li>Skype: "frd.mn"</li>
-				<li>Twitter: @frdmn</li>
-				<li>E-Mail: j@frd.mn</li>
-			</ul>
-		</div>
-		<p>
-			<sub>
-				(via "<a href="http://blog.frd.mn/install-nginx-php-fpm-mysql-and-phpmyadmin-on-os-x-mavericks-using-homebrew/">Install Nginx, PHP-FPM, MySQL and phpMyAdmin on OS X Mavericks using Homebrew</a>")
-			</sub>
-		</p>
-	</body>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="Elephant4OSX landing page">
+    <meta name="author" content="RodrigoJimmy">
+
+
+    <title>Elephant4OSX</title>
+
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+
+    <div class="container">
+      <div class="header clearfix">
+        <nav>
+          <ul class="nav nav-pills pull-right">
+            <li role="presentation"><a href="/">HOME</a></li>
+            <li role="presentation"><a href="https://localhost">SSL</a></li>
+            <li role="presentation"><a href="/info">PHPINFO</a></li>
+          </ul>
+        </nav>
+        <h3 class="text-muted">localhost</h3>
+      </div>
+
+      <div class="jumbotron">
+        <h1>Elephant 4 OSX</h1>
+        <p class="lead">Parabéns, seu ambiente de desenvolvimento PHP foi instalado e configurado corretamente.
+        Clique em "detalhes" para verificar possíveis novidades.</p>
+        <p><a class="btn btn-lg btn-success" href="https://medium.com/@rodrigojimmy/60faac03d065" role="button">Detalhes</a></p>
+      </div>
+
+      <div class="row">
+        <div class="col-sm-6 col-md-4">
+          <div class="thumbnail">
+            <a href="http://php.net"><img src="https://raw.githubusercontent.com/RodrigoJimmy/elephant4osx/master/images/php_logo.png" alt="php-logo"></a>
+            <div class="caption">
+              <h3>PHP-FPM</h3>
+              <p>FPM (FastCGI Process Manager), uma alternativa ao FastCGI com muitas funcionalidades voltadas a sites com grandes números de acessos e carga: avançado gerenciador de processos, com capacidade de parar/iniciar sem interromper requisições, subprocessos (workers) com diferentes uid/gid/chroot/env escutando em diferentes portas em com php.ini independente, entre outras.</p>
+                <a href="http://php.net/manual/en/install.fpm.php" class="btn btn-default btn-xs">Leia mais</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4">
+          <div class="thumbnail">
+            <a href="http://wiki.nginx.org"><img src="https://raw.githubusercontent.com/RodrigoJimmy/elephant4osx/master/images/nginx_logo.png" alt="php-logo"></a>
+            <div class="caption">
+              <h3>NGINX</h3>
+              <p>Nginx [pronuncia-se engine-x] é um servidor proxy HTTP e reverso, bem como um servidor de proxy de email, escrito por Igor Sysoev desde 2005. Segundo a Netcraft em fevereiro de 2013 o Nginx foi considerado o maior servidor HTTP, responsável por 12,81% dos servidores de HTTP e IMAP/POP3.</p>
+              <a href="http://wiki.nginx.org/Main" class="btn btn-default btn-xs">Leia mais</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4">
+          <div class="thumbnail">
+            <a href="http://dev.mysql.com"><img src="https://raw.githubusercontent.com/RodrigoJimmy/elephant4osx/master/images/mysql_logo.png" alt="php-logo"></a>
+            <div class="caption">
+              <h3>MySQL</h3>
+              <p>O MySQL é um sistema de gerenciamento de banco de dados (SGBD), que utiliza a linguagem SQL (Linguagem de Consulta Estruturada, do inglês Structured Query Language) como interface. É atualmente um dos bancos de dados mais populares , com mais de 10 milhões de instalações pelo mundo.</p>
+              <a href="http://dev.mysql.com" class="btn btn-default btn-xs">Leia mais</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer class="footer">
+        <p>&copy; Company 2014</p>
+      </footer>
+
+    </div> <!-- /container -->
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  </body>
 </html>
