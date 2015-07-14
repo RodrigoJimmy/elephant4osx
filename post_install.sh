@@ -23,6 +23,10 @@ openssl req -new -newkey rsa:4096 -days 365 -nodes -x509 -subj "/C=US/ST=State/L
 ln -sfv /usr/local/etc/nginx/sites-available/default /usr/local/etc/nginx/sites-enabled/default
 ln -sfv /usr/local/etc/nginx/sites-available/default-ssl /usr/local/etc/nginx/sites-enabled/default-ssl
 
+## nginx.new_site util
+curl -L https://raw.githubusercontent.com/RodrigoJimmy/elephant4osx/master/config/nginx/nginx.new_site -o /usr/local/bin/nginx.new_site
+chmod +x /usr/local/nginx.new_site
+
 # aliases
 curl -L https://raw.githubusercontent.com/RodrigoJimmy/elephant4osx/master/config/term/.bash_aliases -o /tmp/aliases.tmp
 cat /tmp/aliases.tmp >> ~/.bash_aliases
