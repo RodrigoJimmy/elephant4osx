@@ -64,6 +64,7 @@ ln -sfv /usr/local/etc/nginx/sites-available/default-ssl /usr/local/etc/nginx/si
 curl -L https://raw.githubusercontent.com/RodrigoJimmy/elephant4osx/master/config/nginx/serve-laravel.sh -o /usr/local/bin/serve-laravel.sh
 chmod +x /usr/local/bin/serve-laravel.sh
 
+sed -i.bak 's/127.0.0.1:9000/\/usr\/local\/var\/run\/php5-fpm.sock/g' /usr/local/etc/php/5.6/php-fpm.conf
 curl -L https://raw.githubusercontent.com/RodrigoJimmy/elephant4osx/master/config/term/.bash_aliases -o ~/.bash_aliases
 echo "source ~/.bash_aliases" >> ~/.bash_profile
 source ~/.bash_profile
