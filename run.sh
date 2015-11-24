@@ -73,5 +73,5 @@ source ~/.bash_profile
 
 echo  "Installing Laravel installer"
 composer global require "laravel/installer=~1.1"
-
+echo 'export PATH="~/.composer/vendor/bin:$PATH"' >> ../.bash_profile
 
