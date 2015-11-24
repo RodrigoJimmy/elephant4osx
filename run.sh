@@ -10,21 +10,20 @@ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/
 echo "checking brew installation"
 brew doctor && brew update && brew upgrade
 
+
 echo "Setting brew taps"
 brew tap homebrew/dupes
 brew tap homebrew/versions
 brew tap homebrew/homebrew-php
-brew tap homebrew-nginx
+brew tap homebrew/nginx
 
 echo "Installing packages"
 brew install php56  --without-apache
-brew install mysql
-brew install nginx
-brew install composer
+brew install mysql nginx composer
 composer selfupdate
 
 
-echo "Setup auto start"
+echo "Setup auto start (optional)"
 mkdir -p ~/Library/LaunchAgents
 ln -sfv /usr/local/opt/php56/homebrew.mxcl.php56.plist ~/Library/LaunchAgents/
 ln -sfv /usr/local/opt/mysql/*.plist ~/Library/LaunchAgents/
@@ -33,7 +32,8 @@ sudo chown root.wheel /usr/local/Cellar/nginx/1.8.0/homebrew.mxcl.nginx.plist
 sudo chmod +x /Library/LaunchAgents/homebrew.mxcl.nginx.plist
 
 
-echo "Secure the installation"
+echo "Secure the installation (just say y|Y to all questions)"
+mysql.server start
 mysql_secure_installation
 
 
@@ -74,9 +74,3 @@ echo  "Installing Laravel installer"
 composer global require "laravel/installer=~1.1"
 
 
-echo "Installing nvm, npm and node"
-brew install nvm
-echo "source $(brew --prefix nvm)/nvm.sh" >> ~/.bash_profile
-nvm ls-remote
-nvm install -s v0.12.5
-nvm install -s v0.12.5
