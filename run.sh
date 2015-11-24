@@ -27,14 +27,16 @@ echo "Setup auto start (optional)"
 mkdir -p ~/Library/LaunchAgents
 ln -sfv /usr/local/opt/php56/homebrew.mxcl.php56.plist ~/Library/LaunchAgents/
 ln -sfv /usr/local/opt/mysql/*.plist ~/Library/LaunchAgents/
-cp /usr/local/opt/nginx/*.plist ~/Library/LaunchAgents/
-sudo chown root.wheel /usr/local/Cellar/nginx/1.8.0/homebrew.mxcl.nginx.plist
+
+echo "Nginx auto start with root permissions due to running on port 80"
+sudo cp /usr/local/opt/nginx/*.plist /Library/LaunchAgents/
 sudo chmod +x /Library/LaunchAgents/homebrew.mxcl.nginx.plist
 
 
 echo "Secure the installation (just say y|Y to all questions)"
 mysql.server start
 mysql_secure_installation
+sed -i.bak 's/127.0.0.1:9000/\/usr\/local\/var\/run\/php5-fpm.sock/g' /usr/local/etc/php/5.6/php-fpm.conf
 
 
 mkdir -p /usr/local/etc/nginx/logs
@@ -64,7 +66,6 @@ ln -sfv /usr/local/etc/nginx/sites-available/default-ssl /usr/local/etc/nginx/si
 curl -L https://raw.githubusercontent.com/RodrigoJimmy/elephant4osx/master/config/nginx/serve-laravel.sh -o /usr/local/bin/serve-laravel.sh
 chmod +x /usr/local/bin/serve-laravel.sh
 
-sed -i.bak 's/127.0.0.1:9000/\/usr\/local\/var\/run\/php5-fpm.sock/g' /usr/local/etc/php/5.6/php-fpm.conf
 curl -L https://raw.githubusercontent.com/RodrigoJimmy/elephant4osx/master/config/term/.bash_aliases -o ~/.bash_aliases
 echo "source ~/.bash_aliases" >> ~/.bash_profile
 source ~/.bash_profile
