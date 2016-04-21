@@ -1,12 +1,11 @@
 
-# Yosemite PHP envirnoment
-TODO: verificar como configurar serviços para nao levantar no boot/login
+# El Capitan PHP envirnoment
 
-source: http://blog.frd.mn/install-nginx-php-fpm-mysql-and-phpmyadmin-on-os-x-mavericks-using-homebrew/
 
 ## Install Xcode Command Line Tools
-Open a terminal and install command line tools:
+```sh
 $ xcode-select --install
+```
 
 ## Install homebrew
 Open a terminal and install brew:
